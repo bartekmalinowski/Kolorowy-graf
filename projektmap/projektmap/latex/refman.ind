@@ -1,0 +1,23 @@
+\begin{theindex}
+
+  \item {color\_graph}
+    \subitem {funkcje.h}, \hyperpage{3}
+
+  \indexspace
+
+  \item {funkcje.h}, \hyperpage{3}
+    \subitem {color\_graph}, \hyperpage{3}
+    \subitem {read\_graph}, \hyperpage{4}
+    \subitem {write\_coloring}, \hyperpage{4}
+
+  \indexspace
+
+  \item {read\_graph}
+    \subitem {funkcje.h}, \hyperpage{4}
+
+  \indexspace
+
+  \item {write\_coloring}
+    \subitem {funkcje.h}, \hyperpage{4}
+
+\end{theindex}

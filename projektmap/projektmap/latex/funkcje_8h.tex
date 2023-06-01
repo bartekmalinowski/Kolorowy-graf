@@ -1,0 +1,94 @@
+\hypertarget{funkcje_8h}{}\doxysection{funkcje.\+h File Reference}
+\label{funkcje_8h}\index{funkcje.h@{funkcje.h}}
+
+
+Plik nagłówkowy zawierający deklaracje funkcji dla kolorowania grafów.  
+
+
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{funkcje_8h_adfd30ded4fa0120db28ead55eb863549}\label{funkcje_8h_adfd30ded4fa0120db28ead55eb863549}} 
+typedef std\+::map$<$ int, std\+::vector$<$ int $>$ $>$ {\bfseries Graph}
+\begin{DoxyCompactList}\small\item\em Reprezentuje graf jako mapę, w której klucze to wierzchołki, a wartości to listy sąsiedztwa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{funkcje_8h_a4f328b8e40c9bd9f70220a4bfc72b935}{read\+\_\+graph}} (std\+::ifstream \&infile, \mbox{\hyperlink{funkcje_8h_adfd30ded4fa0120db28ead55eb863549}{Graph}} \&graph)
+\begin{DoxyCompactList}\small\item\em Wczytuje graf z pliku i zapisuje go w postaci mapy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{funkcje_8h_a0e68bc912f2347f758655aa75b79c4f2}{color\+\_\+graph}} (const \mbox{\hyperlink{funkcje_8h_adfd30ded4fa0120db28ead55eb863549}{Graph}} \&graph, std\+::map$<$ int, int $>$ \&coloring)
+\begin{DoxyCompactList}\small\item\em Koloruje graf i zapisuje wynik w postaci mapy, w której klucze to wierzchołki, a wartości to kolory. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{funkcje_8h_a76bd9ab16476b043b9916616b2eb6d19}{write\+\_\+coloring}} (std\+::ofstream \&outfile, const std\+::map$<$ int, int $>$ \&coloring)
+\begin{DoxyCompactList}\small\item\em Zapisuje kolorowanie grafu do pliku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Plik nagłówkowy zawierający deklaracje funkcji dla kolorowania grafów. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{funkcje_8h_a0e68bc912f2347f758655aa75b79c4f2}\label{funkcje_8h_a0e68bc912f2347f758655aa75b79c4f2}} 
+\index{funkcje.h@{funkcje.h}!color\_graph@{color\_graph}}
+\index{color\_graph@{color\_graph}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{\texorpdfstring{color\_graph()}{color\_graph()}}
+{\footnotesize\ttfamily bool color\+\_\+graph (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{funkcje_8h_adfd30ded4fa0120db28ead55eb863549}{Graph}} \&}]{graph,  }\item[{std\+::map$<$ int, int $>$ \&}]{coloring }\end{DoxyParamCaption})}
+
+
+
+Koloruje graf i zapisuje wynik w postaci mapy, w której klucze to wierzchołki, a wartości to kolory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em graph} & mapa reprezentująca graf. \\
+\hline
+{\em coloring} & mapa reprezentująca kolorowanie grafu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli udało się poprawnie pokolorować graf, false w przeciwnym razie. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{funkcje_8h_a4f328b8e40c9bd9f70220a4bfc72b935}\label{funkcje_8h_a4f328b8e40c9bd9f70220a4bfc72b935}} 
+\index{funkcje.h@{funkcje.h}!read\_graph@{read\_graph}}
+\index{read\_graph@{read\_graph}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{\texorpdfstring{read\_graph()}{read\_graph()}}
+{\footnotesize\ttfamily bool read\+\_\+graph (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{infile,  }\item[{\mbox{\hyperlink{funkcje_8h_adfd30ded4fa0120db28ead55eb863549}{Graph}} \&}]{graph }\end{DoxyParamCaption})}
+
+
+
+Wczytuje graf z pliku i zapisuje go w postaci mapy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em infile} & strumień wejściowy do pliku. \\
+\hline
+{\em graph} & mapa reprezentująca graf. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli udało się poprawnie wczytać graf, false w przeciwnym razie. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{funkcje_8h_a76bd9ab16476b043b9916616b2eb6d19}\label{funkcje_8h_a76bd9ab16476b043b9916616b2eb6d19}} 
+\index{funkcje.h@{funkcje.h}!write\_coloring@{write\_coloring}}
+\index{write\_coloring@{write\_coloring}!funkcje.h@{funkcje.h}}
+\doxysubsubsection{\texorpdfstring{write\_coloring()}{write\_coloring()}}
+{\footnotesize\ttfamily bool write\+\_\+coloring (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{outfile,  }\item[{const std\+::map$<$ int, int $>$ \&}]{coloring }\end{DoxyParamCaption})}
+
+
+
+Zapisuje kolorowanie grafu do pliku. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em outfile} & strumień wyjściowy do pliku. \\
+\hline
+{\em coloring} & mapa reprezentująca kolorowanie grafu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli udało się poprawnie zapisać kolorowanie grafu do pliku, false w przeciwnym razie. 
+\end{DoxyReturn}
